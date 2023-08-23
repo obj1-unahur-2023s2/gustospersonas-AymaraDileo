@@ -31,6 +31,23 @@ object munieco {
 	}
 }
 
+object arito {
+	method color() = celeste
+	method peso() = 180
+	method material() = cobre
+}
+
+object banquito {
+	var color = naranja 
+	
+	method material() = madera
+	method peso() = 1700
+	method color() = color
+	method color(unColor) {
+		color = unColor
+	}
+}
+
 object placa {
 	var peso
 	var color
@@ -45,4 +62,15 @@ object placa {
 		color = unColor
 	}
 	
+}
+
+object cajita {
+	var objetoDentro
+	
+	method color() = rojo
+	method material() = cobre
+	method ponerObjeto(unObjeto) {
+		objetoDentro = unObjeto 
+	}
+	method peso() = 400 + objetoDentro.peso()
 }

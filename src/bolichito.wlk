@@ -22,5 +22,21 @@ object bolichito {
 		return objetoEnMostrador.color() == objetoEnVidriera.color()
 	}
 	
+	method estaDesequilibrado(){
+		return objetoEnMostrador.peso() > objetoEnVidriera.peso()
+	}
+	
+	method tieneAlgoDeColor(color){
+		return objetoEnVidriera.color() == color || objetoEnMostrador.color() == color
+	}
+	
+	method puedeMejorar(){
+		return self.estaDesequilibrado() || self.esMonocromatico()
+	}
+	
+	method puedeOfrecerleAlgoA(persona){
+		return objetoEnVidriera == persona.leGusta(objetoEnVidriera)
+	}
 	
 }
+   
